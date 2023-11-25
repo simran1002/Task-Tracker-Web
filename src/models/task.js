@@ -1,34 +1,31 @@
 const mongoose=require("mongoose");
 const validator=require("validator");
 
-
-
-const BookSchema=new mongoose.Schema({
-    name:{
+const TaskSchema=new mongoose.Schema({
+    title:{
         type:String,
         required:true,
-        minlength:4
+        minlength:5
     },
-    isbn_no:{
+    description:{
         type:String,
         required:true,
-        unique:[true,"Book Number already exists"],
-        maxlength:30
+        maxlength:100
     },
-    author_name:{
+    assigned_user:{
         type:String,
         required:true,
     },
-    genre:{
+    due_date:{
         type:String
     },
-    inventory:{
+    status:{
         type:String
     }
 });
 
-const Book= new mongoose.model("Books",BookSchema);
+const Tasks= new mongoose.model("Tasks",TaskSchema);
 
-module.exports=Book;
+module.exports=Tasks;
 
 
