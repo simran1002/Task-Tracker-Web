@@ -31,8 +31,8 @@ const UserSchema = new mongoose.Schema(
     },
     accountType: {
       type: String,
-      enum: ["Admin", "User"],
-      default: "User",
+      enum: ["Admin", "Employee"],
+      default: "Employee",
     },
   },
   { timestamps: true }

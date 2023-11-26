@@ -35,7 +35,7 @@ exports.isAuthenticated = async (req, res, next) => {
 
 exports.isUser = async (req, res, next) => {
   try {
-    if (req.user.accountType !== "User" ) {
+    if (req.user.accountType !== "Employee" ) {
       return res.status(401).json({
         success: false,
         message: "Not authorized",
