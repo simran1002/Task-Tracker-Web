@@ -1,0 +1,756 @@
+{
+	"info": {
+		"_postman_id": "ab3253c8-74ce-4645-8b83-16bc8cba895a",
+		"name": "Task-Manager-Web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24106690"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"Simran Yadav\",\r\n    \"email\": \"simran4884@gmail.com\",\r\n    \"password\": \"Sim10\",\r\n    \"accountType\": \"User\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/v1/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"Simran Yadav\",\r\n    \"email\": \"simran4884@gmail.com\",\r\n    \"password\": \"Sim10\",\r\n    \"accountType\": \"User\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "54"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"36-MmDe8BssOv3Mbe83+wQb6lPPsNA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 26 Nov 2023 05:28:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"User created successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"simranyadav44@gmail.com\",\r\n    \"password\": \"Sim10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/v1/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"simranyadav44@gmail.com\",\r\n    \"password\": \"Sim10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbXJhbnlhZGF2NDRAZ21haWwuY29tIiwiaWQiOiI2NTYyM2NkYzZkYmRkYzE5YjNjYmM5ZmEiLCJhY2NvdW50VHlwZSI6IkFkbWluIiwiaWF0IjoxNzAwOTc2NDY2LCJleHAiOjE3MDEwNjI4NjZ9.An6lmYzk4vdbZwCqBRw2p-tfQvpr-ih0mlbR7Q1P8xc; Path=/; Expires=Wed, 29 Nov 2023 05:27:46 GMT; HttpOnly"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "630"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"276-SLL3yxFv3qxObc45VqQ4ckPDuTg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 26 Nov 2023 05:27:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbXJhbnlhZGF2NDRAZ21haWwuY29tIiwiaWQiOiI2NTYyM2NkYzZkYmRkYzE5YjNjYmM5ZmEiLCJhY2NvdW50VHlwZSI6IkFkbWluIiwiaWF0IjoxNzAwOTc2NDY2LCJleHAiOjE3MDEwNjI4NjZ9.An6lmYzk4vdbZwCqBRw2p-tfQvpr-ih0mlbR7Q1P8xc\",\n    \"user\": {\n        \"_id\": \"65623cdc6dbddc19b3cbc9fa\",\n        \"userName\": \"Simran Yadav\",\n        \"email\": \"simranyadav44@gmail.com\",\n        \"salt\": \"$2b$10$1peQm1dm1vfDsr2rOYCfw.\",\n        \"password\": \"$2b$10$1peQm1dm1vfDsr2rOYCfw.GjJtnedsGgzwu2nK1uooaEDW8BrKpGS\",\n        \"accountType\": \"Admin\",\n        \"createdAt\": \"2023-11-25T18:28:44.501Z\",\n        \"updatedAt\": \"2023-11-25T18:28:44.501Z\",\n        \"__v\": 0\n    },\n    \"message\": \"logged in Successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbXJhbnlhZGF2NDRAZ21haWwuY29tIiwiaWQiOiI2NTYyM2NkYzZkYmRkYzE5YjNjYmM5ZmEiLCJhY2NvdW50VHlwZSI6IkFkbWluIiwiaWF0IjoxNzAwOTc2NDY2LCJleHAiOjE3MDEwNjI4NjZ9.An6lmYzk4vdbZwCqBRw2p-tfQvpr-ih0mlbR7Q1P8xc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"6562d1a34751787f8ee25178\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/v1/auth/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"delete"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"6562353b36656d721bae35f9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/auth/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"delete"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "54"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"36-U3bFObQjPKn4UTk58ToYjyCEL80\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Nov 2023 18:42:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"User deleted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "create task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbXJhbjQ4ODRAZ21haWwuY29tIiwiaWQiOiI2NTYyZDc4OWMyMTBmYTQ4ZTRjMGY2YzYiLCJhY2NvdW50VHlwZSI6IlVzZXIiLCJpYXQiOjE3MDA5NzY3MjksImV4cCI6MTcwMTA2MzEyOX0.p5h_GMKWH7W2kJ9rPmeNE_VwbH0s73Hz_YAW7KqHo6s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"taskId\":\"567\",\r\n    \"title\":\"login\",\r\n    \"description\":\"login the member\",\r\n    \"assigned_user\":\"Aman\",\r\n    \"due_date\":\"28/11/23\",\r\n    \"status\":\"incomplete\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/v1/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"tasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create task",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"taskId\":\"564\",\r\n    \"title\":\"registration\",\r\n    \"description\":\"Register the new member\",\r\n    \"assigned_user\":\"Simran\",\r\n    \"due_date\":\"26/11/23\",\r\n    \"status\":\"incomplete\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"38-myyswvT/GVJQRd2zYLWEWFbDLWQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 26 Nov 2023 05:20:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Task generated successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get all tasks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbXJhbnlhZGF2NDg4NEBnbWFpbC5jb20iLCJpZCI6IjY1NjJkMWEzNDc1MTc4N2Y4ZWUyNTE3OCIsImFjY291bnRUeXBlIjoiVXNlciIsImlhdCI6MTcwMDk3NTA5MiwiZXhwIjoxNzAxMDYxNDkyfQ.DaXscjQVA-VxldjC5P_sTukaIizbZNaulB1PzqX8JDM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/v1/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"tasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get all tasks",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "401"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"191-afThwHbt+Gub8dTU5rMwXd1l0EY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 26 Nov 2023 05:32:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"tasks\": [\n        {\n            \"_id\": \"6562d6e7c210fa48e4c0f6bb\",\n            \"taskId\": \"564\",\n            \"title\": \"registration\",\n            \"description\": \"Register the new member\",\n            \"assigned_user\": \"Simran\",\n            \"due_date\": \"26/11/23\",\n            \"status\": \"incomplete\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6562d8740aa0716358a5c0ef\",\n            \"taskId\": \"567\",\n            \"title\": \"login\",\n            \"description\": \"login the member\",\n            \"assigned_user\": \"Aman\",\n            \"due_date\": \"28/11/23\",\n            \"status\": \"incomplete\",\n            \"__v\": 0\n        }\n    ],\n    \"length\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "get task by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/v1/tasks/6562d6e7c210fa48e4c0f6bb",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"6562d6e7c210fa48e4c0f6bb"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/tasks/6562d59a2949db646c023b3e",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"6562d59a2949db646c023b3e"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "213"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d5-yeD3nWOq44DEx/+jusQabVLvYws\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 26 Nov 2023 05:22:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"task\": {\n        \"_id\": \"6562d59a2949db646c023b3e\",\n        \"taskId\": \"564\",\n        \"title\": \"registration\",\n        \"description\": \"Register the new member\",\n        \"assigned_user\": \"Simran\",\n        \"due_date\": \"26/11/23\",\n        \"status\": \"incomplete\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "update the task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbXJhbnlhZGF2NDg4NEBnbWFpbC5jb20iLCJpZCI6IjY1NjJkMWEzNDc1MTc4N2Y4ZWUyNTE3OCIsImFjY291bnRUeXBlIjoiVXNlciIsImlhdCI6MTcwMDk3NTA5MiwiZXhwIjoxNzAxMDYxNDkyfQ.DaXscjQVA-VxldjC5P_sTukaIizbZNaulB1PzqX8JDM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"taskId\":\"564\",\r\n    \"title\":\"registration\",\r\n    \"description\":\"Register the new member\",\r\n    \"assigned_user\":\"Simran\",\r\n    \"due_date\":\"26/11/23\",\r\n    \"status\":\"complete\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/v1/tasks/6562d59a2949db646c023b3e",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"6562d59a2949db646c023b3e"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update the task",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"taskId\":\"564\",\r\n    \"title\":\"registration\",\r\n    \"description\":\"Register the new member\",\r\n    \"assigned_user\":\"Simran\",\r\n    \"due_date\":\"26/11/23\",\r\n    \"status\":\"complete\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tasks/6562d59a2949db646c023b3e",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"6562d59a2949db646c023b3e"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "270"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10e-mXhMoG4oxIbkTOXU1BOXRv3kWXY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 26 Nov 2023 05:24:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"6562d59a2949db646c023b3e\",\n        \"taskId\": \"6562d59a2949db646c023b3e\",\n        \"title\": \"registration\",\n        \"description\": \"Register the new member\",\n        \"assigned_user\": \"Simran\",\n        \"due_date\": \"26/11/23\",\n        \"status\": \"complete\",\n        \"__v\": 0\n    },\n    \"message\": \"Task updated successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete the task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/v1/tasks/6562d59a2949db646c023b3e",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"6562d59a2949db646c023b3e"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/tasks/6562d59a2949db646c023b3e",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"6562d59a2949db646c023b3e"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "54"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"36-nEz6SFM1ji4GJKYMbq77oGLxI5Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 26 Nov 2023 05:25:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Task deleted successfully\"\n}"
+				}
+			]
+		}
+	]
+}
