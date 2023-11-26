@@ -2,6 +2,11 @@ const mongoose=require("mongoose");
 const validator=require("validator");
 
 const TaskSchema=new mongoose.Schema({
+    taskId: {
+        type: String,
+        unique: true, 
+        required: true,
+      },
     title:{
         type:String,
         required:true,
