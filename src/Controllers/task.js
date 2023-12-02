@@ -23,7 +23,7 @@ exports.postTask = async (req, res) => {
     if (!taskId || !title || !description || !assigned_user || !due_date || !status) {
       return res.status(400).json({
         success: false,
-        message: "Please enter all fields",
+        message: "Please enter all required fields",
       });
     }
 

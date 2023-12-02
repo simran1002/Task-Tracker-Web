@@ -99,7 +99,7 @@ exports.postLogin = async (req, res) => {
       success: true,
       token,
       user,
-      message: "logged in Successfully",
+      message: "Logged in Successfully",
     });
   } catch (error) {
     return res.status(500).json({
@@ -115,7 +115,7 @@ exports.deleteUser = async (req, res) => {
     if (!id) {
       return res.status(400).json({
         success: false,
-        message: "Please provide user id",
+        message: "Please provide the user id",
       });
     }
 
@@ -129,7 +129,7 @@ exports.deleteUser = async (req, res) => {
     await User.findByIdAndDelete(id);
     return res.status(200).json({
       success: true,
-      message: "User deleted successfully",
+      message: "User details deleted successfully",
     });
   } catch (error) {}
 };
