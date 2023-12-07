@@ -21,7 +21,7 @@ app.use(Routes);
 app.get("/", (req, res) => {
   return res.status(200).json({
     success: true,
-    message: "Task-Tracker",
+    message: "Task-Tracker-Web",
   });
 });
 
