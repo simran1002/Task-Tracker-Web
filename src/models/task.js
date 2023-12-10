@@ -22,7 +22,7 @@ const TaskSchema=new mongoose.Schema({
         required:true,
     },
     due_date:{
-        type:String
+        type:Date
     },
     status:{
         type:String
