@@ -6,10 +6,10 @@ const Task = require("../models/task");
 // Create a new task
 exports.postTask = async (req, res) => {
   try {
-    const { taskId, title, description, assigned_user, due_date, status } = req.body;
+    const { taskId, title, description, assigned_user, due_date, status,category } = req.body;
 
     // Check if all required fields are provided
-    if (!taskId || !title || !description || !assigned_user || !due_date || !status) {
+    if (!taskId || !title || !description || !assigned_user || !due_date || !status || category) {
       return res.status(400).json({
         success: false,
         message: "Please enter all required fields",
@@ -33,6 +33,7 @@ exports.postTask = async (req, res) => {
       assigned_user: assigned_user,
       due_date: due_date,
       status: status,
+      category: category
     });
 
     return res.status(200).json({
@@ -136,11 +137,66 @@ exports.markTaskAsCompleted = async (taskId) => {
 
 
 
+
+// Get all tasks or tasks filtered by category
+exports.getAllTasks = async (req, res) => {
+  try {
+    // You can modify this logic based on your requirements
+    const tasks = await Task.find({});
+    return res.status(200).json({
+      success: true,
+      tasks: tasks,
+      length: tasks.length,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+
+
+
+
+// Get tasks by category
+exports.getTasksByCategory = async (req, res) => {
+  try {
+    const category = req.params.category;
+
+    if (!category) {
+      return res.status(400).json({
+        success: false,
+        message: "Please provide a category",
+      });
+    }
+
+    // Find tasks by category
+    const tasks = await Task.find({ category });
+
+    return res.status(200).json({
+      success: true,
+      tasks: tasks,
+      length: tasks.length,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+}
+
+
+
+
+
 // Update a task by ID
 exports.updateTask = async (req, res) => {
   try {
     const id = req.params.id;
-    const { taskId, title, description, assigned_user, due_date, status } =
+    const { taskId, title, description, assigned_user, due_date, status, category } =
       req.body;
 
     if (!id) {
@@ -166,7 +222,8 @@ exports.updateTask = async (req, res) => {
       description: description,
       assigned_user: assigned_user,
       due_date: due_date,
-      status: status
+      status: status,
+      category: category
     };
 
     Object.keys(updateFields).forEach(

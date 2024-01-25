@@ -26,6 +26,12 @@ router.get(
   Task_controller.getTask
 );
 
+// Get all tasks or tasks filtered by category
+router.get("/tasks", tasksController.getAllTasks);
+
+// Get tasks by category
+router.get("/tasks-by-category/:category", tasksController.getTasksByCategory);
+
 router.put(
   "/task-done/:taskId",
   auth_middleWare.isAuthenticated,
