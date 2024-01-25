@@ -28,7 +28,7 @@ router.get(
 );
 
 // Get all tasks or tasks filtered by category (duplicate route, consider removing)
-router.get("/tasks", Task_controller.getAllTasks);
+router.get("/tasks-category", Task_controller.getAllTasks);
 
 // Get tasks by category
 router.get("/tasks-by-category/:category", Task_controller.getTasksByCategory);
