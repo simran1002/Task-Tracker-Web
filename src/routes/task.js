@@ -7,23 +7,18 @@ const auth_middleWare = require("../Middleware/Auth");
 router.post(
   "/tasks",
   auth_middleWare.isAuthenticated,
-  auth_middleWare.isUser,
   Task_controller.postTask
 );
 
 // Get all tasks
 router.get(
   "/tasks",
-  auth_middleWare.isAuthenticated,
-  auth_middleWare.isUser,
   Task_controller.getAllTasks
 );
 
 // Get a specific task by ID
 router.get(
   "/tasks/:id",
-  auth_middleWare.isAuthenticated,
-  auth_middleWare.isUser,
   Task_controller.getTask
 );
 
@@ -37,7 +32,6 @@ router.get("/tasks-by-category/:category", Task_controller.getTasksByCategory);
 router.put(
   "/task-done/:taskId",
   auth_middleWare.isAuthenticated,
-  auth_middleWare.isUser,
   Task_controller.markTaskAsCompleted
 );
 
@@ -45,7 +39,6 @@ router.put(
 router.put(
   "/tasks/:id",
   auth_middleWare.isAuthenticated,
-  auth_middleWare.isUser,
   Task_controller.updateTask
 );
 
@@ -53,7 +46,6 @@ router.put(
 router.delete(
   "/tasks/:id",
   auth_middleWare.isAuthenticated,
-  auth_middleWare.isUser,
   Task_controller.deleteTask
 );
 

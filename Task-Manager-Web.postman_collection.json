@@ -1,0 +1,995 @@
+{
+	"info": {
+		"_postman_id": "ab3253c8-74ce-4645-8b83-16bc8cba895a",
+		"name": "Task-Manager-Web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24106690"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"Simran Yadav\",\r\n    \"email\": \"sim658@gmail.com\",\r\n    \"password\": \"Sim10\",\r\n    \"accountType\": \"Admin\"\r\n}\r\n ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/v1/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Signup",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"Simran Yadav\",\r\n    \"email\": \"sim658@gmail.com\",\r\n    \"password\": \"Sim10\",\r\n    \"accountType\": \"Employee\"\r\n}\r\n ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "54"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"36-MmDe8BssOv3Mbe83+wQb6lPPsNA\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 25 Jan 2024 19:09:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"User created successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"sim658@gmail.com\",\r\n    \"password\": \"Sim10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/v1/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"sim658@gmail.com\",\r\n    \"password\": \"Sim10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbTY1OEBnbWFpbC5jb20iLCJpZCI6IjY1YjJiMWUwZTY4MGRmY2I4MTY2NjAwNyIsImFjY291bnRUeXBlIjoiRW1wbG95ZWUiLCJpYXQiOjE3MDYyMDk3OTgsImV4cCI6MTcwNjI5NjE5OH0.FOuDy6AY5InOlwat5Qy0WK2hN3UQTbhiWQ9I1fuD7Oo; Path=/; Expires=Sun, 28 Jan 2024 19:09:58 GMT; HttpOnly"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "621"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"26d-jQuIus4GctESEN77NXG7fpLVa+4\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 25 Jan 2024 19:09:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbTY1OEBnbWFpbC5jb20iLCJpZCI6IjY1YjJiMWUwZTY4MGRmY2I4MTY2NjAwNyIsImFjY291bnRUeXBlIjoiRW1wbG95ZWUiLCJpYXQiOjE3MDYyMDk3OTgsImV4cCI6MTcwNjI5NjE5OH0.FOuDy6AY5InOlwat5Qy0WK2hN3UQTbhiWQ9I1fuD7Oo\",\n    \"user\": {\n        \"_id\": \"65b2b1e0e680dfcb81666007\",\n        \"userName\": \"Simran Yadav\",\n        \"email\": \"sim658@gmail.com\",\n        \"salt\": \"$2b$10$KfmzOvdu0bO8v/0NZ3OD9.\",\n        \"password\": \"$2b$10$KfmzOvdu0bO8v/0NZ3OD9.ToMbLU0TLXjUILo2NNsHwWnU3heKCp2\",\n        \"accountType\": \"Employee\",\n        \"createdAt\": \"2024-01-25T19:09:20.105Z\",\n        \"updatedAt\": \"2024-01-25T19:09:20.105Z\",\n        \"__v\": 0\n    },\n    \"message\": \"Logged in Successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbTY1OEBnbWFpbC5jb20iLCJpZCI6IjY1YjJiMWUwZTY4MGRmY2I4MTY2NjAwNyIsImFjY291bnRUeXBlIjoiRW1wbG95ZWUiLCJpYXQiOjE3MDYyMDk3OTgsImV4cCI6MTcwNjI5NjE5OH0.FOuDy6AY5InOlwat5Qy0WK2hN3UQTbhiWQ9I1fuD7Oo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"6562d1a34751787f8ee25178\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/v1/auth/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"delete"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"6562353b36656d721bae35f9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/auth/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"delete"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "54"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"36-U3bFObQjPKn4UTk58ToYjyCEL80\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Nov 2023 18:42:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"User deleted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "create a new task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbTY1OEBnbWFpbC5jb20iLCJpZCI6IjY1YjJiMzgyZTY4MGRmY2I4MTY2NjAwZiIsImFjY291bnRUeXBlIjoiQWRtaW4iLCJpYXQiOjE3MDYyMTAyNTAsImV4cCI6MTcwNjI5NjY1MH0.gZzGddZRYWiW8tsRS9iGHsGCSlODU7sWexgTbjuUCAM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"taskId\": \"123\",\r\n  \"title\": \"Example Task\",\r\n  \"description\": \"This is an example task\",\r\n  \"assigned_user\": \"John Doe\",\r\n  \"due_date\": \"2024-02-28\",\r\n  \"status\": \"incomplete\",\r\n  \"category\": \"Example Category\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/v1/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"tasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create a new task",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"taskId\": \"123\",\r\n  \"title\": \"Example Task\",\r\n  \"description\": \"This is an example task\",\r\n  \"assigned_user\": \"John Doe\",\r\n  \"due_date\": \"2024-02-28\",\r\n  \"status\": \"incomplete\",\r\n  \"category\": \"Example Category\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"38-myyswvT/GVJQRd2zYLWEWFbDLWQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 25 Jan 2024 19:29:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Task generated successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get the list of all tasks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbTY1OEBnbWFpbC5jb20iLCJpZCI6IjY1YjJiMWUwZTY4MGRmY2I4MTY2NjAwNyIsImFjY291bnRUeXBlIjoiRW1wbG95ZWUiLCJpYXQiOjE3MDYyMDk3OTgsImV4cCI6MTcwNjI5NjE5OH0.FOuDy6AY5InOlwat5Qy0WK2hN3UQTbhiWQ9I1fuD7Oo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/v1/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"tasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get the list of all tasks",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "491"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1eb-xbAnOf6s2I1FRn28Pb1Xw+qR2l4\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 25 Jan 2024 19:35:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"tasks\": [\n        {\n            \"_id\": \"65b2b6b6cd210eb3d25d5e0c\",\n            \"taskId\": \"123\",\n            \"title\": \"Example Task\",\n            \"description\": \"This is an example task\",\n            \"assigned_user\": \"John Doe\",\n            \"due_date\": \"2024-02-28T00:00:00.000Z\",\n            \"status\": \"incomplete\",\n            \"category\": \"Example Category\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"65b2b754cd210eb3d25d5e13\",\n            \"taskId\": \"789\",\n            \"title\": \"login\",\n            \"description\": \"login the member\",\n            \"assigned_user\": \"Aman\",\n            \"due_date\": \"2024-02-28T00:00:00.000Z\",\n            \"status\": \"incomplete\",\n            \"category\": \"Registration\",\n            \"__v\": 0\n        }\n    ],\n    \"length\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "get task by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/v1/tasks/65b2b6b6cd210eb3d25d5e0c",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"65b2b6b6cd210eb3d25d5e0c"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get task by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/tasks/65b2b6b6cd210eb3d25d5e0c",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"65b2b6b6cd210eb3d25d5e0c"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "261"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"105-EjA2Ma1bT9QAf6Z2cINu8Al5UBA\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 25 Jan 2024 19:35:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"task\": {\n        \"_id\": \"65b2b6b6cd210eb3d25d5e0c\",\n        \"taskId\": \"123\",\n        \"title\": \"Example Task\",\n        \"description\": \"This is an example task\",\n        \"assigned_user\": \"John Doe\",\n        \"due_date\": \"2024-02-28T00:00:00.000Z\",\n        \"status\": \"incomplete\",\n        \"category\": \"Example Category\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "update the task by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbXJhbnlhZGF2NDg4NEBnbWFpbC5jb20iLCJpZCI6IjY1NjJkMWEzNDc1MTc4N2Y4ZWUyNTE3OCIsImFjY291bnRUeXBlIjoiVXNlciIsImlhdCI6MTcwMDk3NTA5MiwiZXhwIjoxNzAxMDYxNDkyfQ.DaXscjQVA-VxldjC5P_sTukaIizbZNaulB1PzqX8JDM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"taskId\":\"567\",\r\n    \"title\":\"login\",\r\n    \"description\":\"login the member\",\r\n    \"assigned_user\":\"Aman\",\r\n    \"due_date\":\"2024-10-10\",\r\n    \"status\":\"completed\",\r\n    \"category\": \"Login\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/v1/tasks/65b2b6b6cd210eb3d25d5e0c",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"65b2b6b6cd210eb3d25d5e0c"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update the task",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"taskId\":\"567\",\r\n    \"title\":\"login\",\r\n    \"description\":\"login the member\",\r\n    \"assigned_user\":\"Aman\",\r\n    \"due_date\":\"2024-10-10\",\r\n    \"status\":\"completed\",\r\n    \"category\": \"Login\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tasks/65b2b6b6cd210eb3d25d5e0c",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"65b2b6b6cd210eb3d25d5e0c"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "290"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"122-rV8ojqeYzS33vyiP/ZIiU5i4Z2E\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 25 Jan 2024 19:37:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"65b2b6b6cd210eb3d25d5e0c\",\n        \"taskId\": \"65b2b6b6cd210eb3d25d5e0c\",\n        \"title\": \"login\",\n        \"description\": \"login the member\",\n        \"assigned_user\": \"Aman\",\n        \"due_date\": \"2024-10-10T00:00:00.000Z\",\n        \"status\": \"completed\",\n        \"category\": \"Login\",\n        \"__v\": 0\n    },\n    \"message\": \"Task updated successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete the task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/v1/tasks/6562d59a2949db646c023b3e",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"6562d59a2949db646c023b3e"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/tasks/6562d59a2949db646c023b3e",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"6562d59a2949db646c023b3e"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "54"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"36-nEz6SFM1ji4GJKYMbq77oGLxI5Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 26 Nov 2023 05:25:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Task deleted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all tasks filtered by category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/v1/tasks-category",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"tasks-category"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Tasks-category",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/tasks-category",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tasks-category"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "482"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1e2-/krCYrA2BessA6/BbBu9mEhLECE\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 25 Jan 2024 19:37:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"tasks\": [\n        {\n            \"_id\": \"65b2b6b6cd210eb3d25d5e0c\",\n            \"taskId\": \"65b2b6b6cd210eb3d25d5e0c\",\n            \"title\": \"login\",\n            \"description\": \"login the member\",\n            \"assigned_user\": \"Aman\",\n            \"due_date\": \"2024-10-10T00:00:00.000Z\",\n            \"status\": \"completed\",\n            \"category\": \"Login\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"65b2b754cd210eb3d25d5e13\",\n            \"taskId\": \"789\",\n            \"title\": \"login\",\n            \"description\": \"login the member\",\n            \"assigned_user\": \"Aman\",\n            \"due_date\": \"2024-02-28T00:00:00.000Z\",\n            \"status\": \"incomplete\",\n            \"category\": \"Registration\",\n            \"__v\": 0\n        }\n    ],\n    \"length\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "Get tasks by category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/v1/tasks-by-category/Login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"tasks-by-category",
+						"Login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login category list",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/tasks-by-category/Login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tasks-by-category",
+								"Login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "266"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10a-NKSYmYgfFymbWkfUzoSRvJOb/4Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 25 Jan 2024 19:38:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"tasks\": [\n        {\n            \"_id\": \"65b2b6b6cd210eb3d25d5e0c\",\n            \"taskId\": \"65b2b6b6cd210eb3d25d5e0c\",\n            \"title\": \"login\",\n            \"description\": \"login the member\",\n            \"assigned_user\": \"Aman\",\n            \"due_date\": \"2024-10-10T00:00:00.000Z\",\n            \"status\": \"completed\",\n            \"category\": \"Login\",\n            \"__v\": 0\n        }\n    ],\n    \"length\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Mark a task as completed",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbTY1OEBnbWFpbC5jb20iLCJpZCI6IjY1YjJiMWUwZTY4MGRmY2I4MTY2NjAwNyIsImFjY291bnRUeXBlIjoiRW1wbG95ZWUiLCJpYXQiOjE3MDYyMDk3OTgsImV4cCI6MTcwNjI5NjE5OH0.FOuDy6AY5InOlwat5Qy0WK2hN3UQTbhiWQ9I1fuD7Oo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/v1/task-done/65b2b754cd210eb3d25d5e13",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"task-done",
+						"65b2b754cd210eb3d25d5e13"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Mark a task as completed",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/task-done/65b2b754cd210eb3d25d5e13",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"task-done",
+								"65b2b754cd210eb3d25d5e13"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "66"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"42-XCKJXiDOFGT6wNo5rFSq32Nlj9o\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 25 Jan 2024 19:48:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Task marked as completed successfully\"\n}"
+				}
+			]
+		}
+	]
+}

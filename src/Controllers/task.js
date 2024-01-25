@@ -6,10 +6,10 @@ const Task = require("../models/task");
 // Create a new task
 exports.postTask = async (req, res) => {
   try {
-    const { taskId, title, description, assigned_user, due_date, status,category } = req.body;
+    const { taskId,title,description,assigned_user,due_date,status,category } = req.body;
 
     // Check if all required fields are provided
-    if (!taskId || !title || !description || !assigned_user || !due_date || !status || category) {
+    if (!taskId || !title || !description || !assigned_user || !due_date || !status || !category) {
       return res.status(400).json({
         success: false,
         message: "Please enter all required fields",
@@ -112,27 +112,28 @@ exports.getTask = async (req, res) => {
 
 
 // Function to mark a task as completed
-exports.markTaskAsCompleted = async (taskId) => {
+exports.markTaskAsCompleted = async (req, res) => {
   try {
-    // Find the task by taskId
-    const task = await Task.findOne({ taskId });
+    const id = req.params.id;
+    const task = await Task.findOne({ id }); 
 
     if (!task) {
-      throw new Error("Task not found");
+      return res.status(404).json({ success: false, message: "Task not found" });
     }
 
-    // Update the status field to 'complete'
-    task.status = 'complete';
+    // Update the status field to 'completed'
+    task.status = 'completed';
 
     // Save the updated task
     await task.save();
 
-    return { success: true, message: "Task marked as completed successfully" };
+    return res.json({ success: true, message: "Task marked as completed successfully" });
   } catch (error) {
     console.error(error);
-    return { success: false, error: "Internal Server Error" };
+    return res.status(500).json({ success: false, error: "Internal Server Error" }); // Changed to return a JSON response
   }
 };
+
 
 
 
