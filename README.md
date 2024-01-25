@@ -5,28 +5,28 @@ This is a simple Task Tracking System built with [Node.js](https://nodejs.org/) 
 1. **Clone the repository:**
 git clone https://github.com/simran1002/Task-tracker-Web.git
 
-Navigate to the project directory:
+## Navigate to the project directory:
 cd task-management-system
 
-Install dependencies:
+## Install dependencies:
 npm install
 
-Configure environment variables:
+## Configure environment variables:
 Create a .env file in the root of your project and provide the necessary environment variables:
 env
 
-PORT=5000
+## PORT=5000
 
 MONGODB_URI=mongodb+srv://your-mongodb-uri
 
 Adjust the values based on your preferences and MongoDB setup.
 
-Run the application:
+## Run the application:
 npm start
 
 The application will be accessible at http://localhost:5000 by default.
 
-API Endpoints
+## API Endpoints
 Create a new task with title and description:-
 POST /tasks
 
@@ -45,7 +45,7 @@ DELETE /tasks/:id
 Retrieve a particular task by passing Task ID as params:-
 GET /tasks/:id
 
-User Authentication (Optional):
+## User Authentication (Optional):
 
 Implemented a basic user authentication (token-based).
 Only authenticated users should be able to create, update, and delete tasks.
