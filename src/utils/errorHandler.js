@@ -9,4 +9,5 @@ const ErrorHandler = (err, req, res, next) => {
     })
 }
 
+
 export default ErrorHandler

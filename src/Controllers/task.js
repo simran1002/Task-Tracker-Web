@@ -1,25 +1,14 @@
 const Task = require("../models/task");
-exports.getAllTasks = async (req, res) => {
-  try {
-    const tasks = await Task.find({});
 
-    return res.status(200).json({
-      success: true,
-      tasks: tasks,
-      length: tasks.length,
-    });
-  } catch (error) {
-    return res.status(500).json({
-      success: false,
-      message: error.message,
-    });
-  }
-};
 
+
+
+// Create a new task
 exports.postTask = async (req, res) => {
   try {
     const { taskId, title, description, assigned_user, due_date, status } = req.body;
 
+    // Check if all required fields are provided
     if (!taskId || !title || !description || !assigned_user || !due_date || !status) {
       return res.status(400).json({
         success: false,
@@ -27,6 +16,7 @@ exports.postTask = async (req, res) => {
       });
     }
 
+    // Check if the task already exists
     const taskExist = await Task.findOne({ taskId });
     if (taskExist) {
       return res.status(400).json({
@@ -35,8 +25,9 @@ exports.postTask = async (req, res) => {
       });
     }
 
+    // Create a new task
     const newTask = await Task.create({
-      taskId: taskId,  // Fix: Use taskId instead of taskID
+      taskId: taskId,
       title: title,
       description: description,
       assigned_user: assigned_user,
@@ -56,6 +47,33 @@ exports.postTask = async (req, res) => {
   }
 };
 
+
+
+
+
+// Get all tasks
+exports.getAllTasks = async (req, res) => {
+  try {
+    const tasks = await Task.find({});
+
+    return res.status(200).json({
+      success: true,
+      tasks: tasks,
+      length: tasks.length,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+
+
+
+
+// Get a specific task by ID
 exports.getTask = async (req, res) => {
   try {
     const id = req.params.id;
@@ -88,10 +106,41 @@ exports.getTask = async (req, res) => {
   }
 };
 
+
+
+
+
+// Function to mark a task as completed
+exports.markTaskAsCompleted = async (taskId) => {
+  try {
+    // Find the task by taskId
+    const task = await Task.findOne({ taskId });
+
+    if (!task) {
+      throw new Error("Task not found");
+    }
+
+    // Update the status field to 'complete'
+    task.status = 'complete';
+
+    // Save the updated task
+    await task.save();
+
+    return { success: true, message: "Task marked as completed successfully" };
+  } catch (error) {
+    console.error(error);
+    return { success: false, error: "Internal Server Error" };
+  }
+};
+
+
+
+
+// Update a task by ID
 exports.updateTask = async (req, res) => {
   try {
     const id = req.params.id;
-    const { taskId, title, description, assigned_user,due_date,status } =
+    const { taskId, title, description, assigned_user, due_date, status } =
       req.body;
 
     if (!id) {
@@ -109,6 +158,8 @@ exports.updateTask = async (req, res) => {
         message: "Task does not exist",
       });
     }
+
+    // Prepare the fields to be updated, remove undefined values
     const updateFields = {
       taskId: task.id,
       title: title,
@@ -122,6 +173,7 @@ exports.updateTask = async (req, res) => {
       (key) => updateFields[key] === undefined && delete updateFields[key]
     );
 
+    // Update the task
     const updatedTask = await Task.findByIdAndUpdate(id, updateFields, {
       new: true,
     });
@@ -139,6 +191,12 @@ exports.updateTask = async (req, res) => {
   }
 };
 
+
+
+
+
+
+// Delete a task by ID
 exports.deleteTask = async (req, res) => {
   try {
     const id = req.params.id;
@@ -159,6 +217,7 @@ exports.deleteTask = async (req, res) => {
       });
     }
 
+    // Delete the task
     await Task.findByIdAndDelete(id);
 
     return res.status(200).json({

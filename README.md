@@ -34,7 +34,7 @@ Retrieve/View a list of all tasks:-
 GET /tasks
 
 Marks the task as completed:-
-PUT /task-done
+PUT /task-done/:taskId
 
 Update an existing task by task ID:-
 PUT /tasks/:id

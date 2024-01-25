@@ -10,12 +10,14 @@ router.post(
   Task_controller.postTask
 );
 
+
 router.get(
   "/tasks",
   auth_middleWare.isAuthenticated,
   auth_middleWare.isUser,
   Task_controller.getAllTasks
 );
+
 
 router.get(
   "/tasks/:id",
@@ -25,11 +27,20 @@ router.get(
 );
 
 router.put(
+  "/task-done/:taskId",
+  auth_middleWare.isAuthenticated,
+  auth_middleWare.isUser,
+  Task_controller.markTaskAsCompleted
+);
+
+
+router.put(
   "/tasks/:id",
   auth_middleWare.isAuthenticated,
   auth_middleWare.isUser,
   Task_controller.updateTask
 );
+
 
 router.delete(
   "/tasks/:id",
