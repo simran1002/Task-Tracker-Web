@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --require esm test/*.test.js",
     "start": "nodemon app.js"
   },
   "keywords": [],
@@ -25,7 +25,9 @@
     "validator": "^13.11.0"
   },
   "devDependencies": {
+    "@babel/register": "^7.23.7",
     "chai": "^5.0.3",
+    "esm": "^3.2.25",
     "mocha": "^10.2.0",
     "supertest": "^6.3.4"
   }
