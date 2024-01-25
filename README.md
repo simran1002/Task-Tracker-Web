@@ -15,7 +15,7 @@ Configure environment variables:
 Create a .env file in the root of your project and provide the necessary environment variables:
 env
 
-PORT=3000
+PORT=5000
 
 MONGODB_URI=mongodb+srv://your-mongodb-uri
 
@@ -24,7 +24,7 @@ Adjust the values based on your preferences and MongoDB setup.
 Run the application:
 npm start
 
-The application will be accessible at http://localhost:3000 by default.
+The application will be accessible at http://localhost:5000 by default.
 
 API Endpoints
 Create a new task with title and description:-
